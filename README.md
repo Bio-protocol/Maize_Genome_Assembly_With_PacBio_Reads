@@ -17,7 +17,7 @@ To guide eBook authors having a better sense of the workflow layout, here we bri
 
 This is an example workflow to check the quality of the paired-end fastq files using `FastQC` software.
 
-![](graphs/diagram.png)
+![](graphs/Diagram.pdf)
 
 ## Installation
 
