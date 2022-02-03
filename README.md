@@ -88,7 +88,10 @@ bam2fastq -c 9 raw_PacBio.subreads.bam
   ./SequelTools.sh -t Q -u subFiles.txt -c scrFiles.txt
 ```
 
-#### Step 2: Genome assembly
+#### Step 2: Genome assembly using Canu
+
+Here, we provide instructions for Canu version 1.8 to perform the maize genome assembly. Canu assembles PacBio or Oxford Nanopore sequences in three phases: correction, trimming and assembly. The recommended coverage for eukaryotic genomes is between 30x and 60x. Here, we will use traditional PacBio long reads to show how to perform the genome assembly using Canu. Canu can automatically perform correction, trimming and assembly in series by default. However, the users can also run these three phases separately if they want to test different parameters of each phase or if they only want to run trimming and assembly phases using corrected reads generated from other software as following. If the users want to run those three phases automatically by default, please refer to the software’s manual for further information.
+
 1. Correct the raw reads
 - In this phase, Canu will do multiple rounds of overlapping and correction. In order to run the correction phase specifically, the users need to use -pacbio-raw option to provide raw PacBio reads as input data and use -correct option to let Canu only correct the raw reads. If the users have more than 4,096 input files, they must consolidate them into fewer files. The output of the correction phase will be one compressed fasta file with all corrected reads (maize.correctedReads.fasta.gz in our example).
 - The -p <string> option is mandatory to set the file name prefix of intermediate and output files. The -d <assembly directory> is optional. If it is not provided, Canu will run in the current directory. The genomeSize parameter is required by Canu which will be used to determine coverage in the input reads. The users can provide the estimated genome size in bases or with common SI prefixes.
@@ -98,9 +101,19 @@ canu -correct \
      -p maize -d maize \
      genomeSize=2.3g \
      -pacbio-raw raw_PacBio.fastq
-
 ```
 
+2. Trim the corrected reads
+- The trim phase will decide the high-quality regions using overlapping reads and remove the remaining SMRTbell adapter sequences. The input data should be the output of the correction phase. The users need to use -pacbio-corrected option to provide corrected PacBio reads as input data and use -trim option to let Canu only trim the corrected reads. 
+
+```
+canu -trim \
+     -p maize -d maize \
+     genomeSize=2.3g \
+     -pacbio-corrected maize/maize.correctedReads.fasta.gz
+
+```
+    
 #### Step 3: view the results
 
 - Results can be visualized by clicking `output/multiqc_report.html`.
