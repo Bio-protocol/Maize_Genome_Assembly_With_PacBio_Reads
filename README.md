@@ -27,11 +27,16 @@ This is the workflow to show a step-by-step pipeline to assemble a maize genome 
     - The workflow was constructed based on the __Red Hat Enterprise Linux Server release 7.7 (Maipo)__.
 
 - __Required software and versions__: 
-    - [FastQC v0.11.9](http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
-    - [multiqc](https://github.com/ewels/MultiQC)
-    - [R 3.6.3](https://cran.r-project.org/) for results ploting
-        - [RStudio 1.4](https://rstudio.com/), [ggplot2 3.3.3](https://cran.r-project.org/web/packages/ggplot2/index.html), [tidyr 1.1.2](https://github.com/tidyverse/tidyr)
-
+    - [SMRT Tools v10.1.0](https://www.pacb.com/support/software-downloads/)
+    - [SequelTools v1.1.0](https://github.com/ISUgenomics/SequelTools)
+    - [Canu](https://canu.readthedocs.io/en/latest/)
+    - [BUSCO](https://busco.ezlab.org/)
+    - [Pbalign](https://github.com/PacificBiosciences/pbalign)
+    - [Sambamba](https://github.com/biod/sambamba)
+    - [Samtools](https://github.com/samtools/samtools)
+    - [Arrow](https://github.com/PacificBiosciences/GenomicConsensus/)
+    - [ntHits](https://github.com/bcgsc/ntHits)
+    - [ntEdit](https://github.com/bcgsc/ntEdit)
 
 ## Input Data
 
