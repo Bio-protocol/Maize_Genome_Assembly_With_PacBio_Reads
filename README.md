@@ -24,7 +24,7 @@ This is the workflow to show a step-by-step pipeline to assemble a maize genome 
 ## Installation
 
 - __Running environment__: 
-    - The workflow was constructed based on the __Linux system__ running the Oracle v1.6 to 1.8 java runtime environment (JREs).
+    - The workflow was constructed based on the __Red Hat Enterprise Linux Server release 7.7 (Maipo)__.
 
 - __Required software and versions__: 
     - [FastQC v0.11.9](http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
