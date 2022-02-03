@@ -13,9 +13,9 @@ To guide eBook authors having a better sense of the workflow layout, here we bri
 6. __workflow__: Step by step pipeline. 
 7. __README__: This document.
 
-## Overview of an example workflow: Fastq data quality checking
+## Overview of the workflow: Pre-processing of the PacBio raw reads, genome assembly and polishing
 
-This is an example workflow to check the quality of the paired-end fastq files using `FastQC` software.
+This is the workflow to show a step-by-step pipeline to assemble a maize genome with PacBio long reads.
 
 ![](graphs/Diagram.png)
 
