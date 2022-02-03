@@ -29,14 +29,14 @@ This is the workflow to show a step-by-step pipeline to assemble a maize genome 
 - __Required software and versions__: 
     - [SMRT Tools v10.1.0](https://www.pacb.com/support/software-downloads/)
     - [SequelTools v1.1.0](https://github.com/ISUgenomics/SequelTools)
-    - [Canu](https://canu.readthedocs.io/en/latest/)
-    - [BUSCO](https://busco.ezlab.org/)
-    - [Pbalign](https://github.com/PacificBiosciences/pbalign)
-    - [Sambamba](https://github.com/biod/sambamba)
-    - [Samtools](https://github.com/samtools/samtools)
-    - [Arrow](https://github.com/PacificBiosciences/GenomicConsensus/)
-    - [ntHits](https://github.com/bcgsc/ntHits)
-    - [ntEdit](https://github.com/bcgsc/ntEdit)
+    - [Canu v1.8](https://canu.readthedocs.io/en/latest/)
+    - [BUSCO v3.0.2](https://busco.ezlab.org/)
+    - [Pbalign v0.3.2](https://github.com/PacificBiosciences/pbalign)
+    - [Sambamba v0.6.9](https://github.com/biod/sambamba)
+    - [Samtools v1.12](https://github.com/samtools/samtools)
+    - [Arrow v2.3.3](https://github.com/PacificBiosciences/GenomicConsensus/)
+    - [ntHits v1.2.1](https://github.com/bcgsc/ntHits)
+    - [ntEdit v1.2.1](https://github.com/bcgsc/ntEdit)
 
 ## Input Data
 
