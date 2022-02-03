@@ -2,6 +2,8 @@
 
 # Data, Code and Workflows Guideline
 
+Assembly of high-quality genomes is critical for the characterization of structural variations (SV), for the development of a high-resolution map of polymorphisms and to serve as the foundation for gene annotation. In recent years，the advent of high-quality, long-read sequencing has enabled an affordable generation of highly contiguous de novo assemblies, as evidenced by the release of many reference genomes, including from species with large and complex genomes. The long-read sequencing technology is instrumental in accurately profiling the highly abundant repetitive sequences which otherwise challenge sequence alignment and assembly programs in eukaryotic genomes. In this protocol, we describe a step-by-step pipeline to assemble a maize genome with PacBio long reads using Canu and polish the genome using Arrow and ntEdit. Our protocol provides an optional procedure for genome assembly and could be adapted for other plant species.
+
 To guide eBook authors having a better sense of the workflow layout, here we briefly introduce the specific purposes of the dir system. 
 
 
