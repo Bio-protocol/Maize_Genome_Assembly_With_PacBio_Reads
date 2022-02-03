@@ -73,6 +73,20 @@ CGTTNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNGGAG
 bam2fastq -c 9 raw_PacBio.subreads.bam
 ```
 
+- Use SequelTools to perform quality control of PacBio Sequel raw sequencing data from multiple SMRTcells.
+- First, generate a file with a list of locations of *.subreads.bam files and *.scraps.bam files.
+
+```
+ find $PWD/*.subreads.bam > subFiles.txt
+ find $PWD/*.scraps.bam > scrFiles.txt
+```
+
+- Then, run the QC tool of SequelTools with *.scraps.bam files.
+
+```
+  ./SequelTools.sh -t Q -u subFiles.txt -c scrFiles.txt
+```
+
 #### Step 2: aggregate results from FastQC
 
 ```
