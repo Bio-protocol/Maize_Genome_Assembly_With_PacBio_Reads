@@ -82,6 +82,7 @@ bam2fastq -c 9 raw_PacBio.subreads.bam
 ```
 
 - Then, run the QC tool of SequelTools with *.scraps.bam files.
+- Use -t Q to use the QC tool specifically. The argument -u is mandatory to identify a file listing the locations of the subread BAM files. The argument -c is optional to identify a file listing the locations of the scraps BAM files.
 
 ```
   ./SequelTools.sh -t Q -u subFiles.txt -c scrFiles.txt
