@@ -65,11 +65,12 @@ CGTTNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNGGAG
 
 ## Major steps
 
-#### Step 1: running the FastQC to conduct quality checking
-- Note that you have to normalize the path in the shell script.
+#### Step 1: A.	Pre-processing of the PacBio raw reads
+- Covert the *.subreads.bam files to fastq or fasta files with the PacBio tool bam2fastq.
+- Use -c 9 to get all the subreads and then let the assembler decide which reads are good for genome assembly. The command bam2fastq will generate a fastq file (raw_PacBio.fastq) 
 
 ```
-sh workflow/1_run_fastqc.sh
+bam2fastq -c 9 raw_PacBio.subreads.bam
 ```
 
 #### Step 2: aggregate results from FastQC
