@@ -88,10 +88,17 @@ bam2fastq -c 9 raw_PacBio.subreads.bam
   ./SequelTools.sh -t Q -u subFiles.txt -c scrFiles.txt
 ```
 
-#### Step 2: aggregate results from FastQC
+#### Step 2: Genome assembly
+- Correct the raw reads
+- In this phase, Canu will do multiple rounds of overlapping and correction. In order to run the correction phase specifically, the users need to use -pacbio-raw option to provide raw PacBio reads as input data and use -correct option to let Canu only correct the raw reads. If the users have more than 4,096 input files, they must consolidate them into fewer files. The output of the correction phase will be one compressed fasta file with all corrected reads (maize.correctedReads.fasta.gz in our example).
+- The -p <string> option is mandatory to set the file name prefix of intermediate and output files. The -d <assembly directory> is optional. If it is not provided, Canu will run in the current directory. The genomeSize parameter is required by Canu which will be used to determine coverage in the input reads. The users can provide the estimated genome size in bases or with common SI prefixes.
 
 ```
-sh workflow/2_aggregate_results.sh
+canu -correct \
+     -p maize -d maize \
+     genomeSize=2.3g \
+     -pacbio-raw raw_PacBio.fastq
+
 ```
 
 #### Step 3: view the results
