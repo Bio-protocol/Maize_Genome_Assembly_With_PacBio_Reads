@@ -113,7 +113,10 @@ canu -assemble \
 1. Use Arrow to pollish the assembly
 - To improve the accuracy of the genome assembly, Arrow will be used to polish the contigs assembled from the Sequel System data by mapping a set of raw PacBio raw reads to the contigs and building a consensus of this read mapping. The variantCaller provided by GenomicConsensus package is the command line tool to call Arrow algorithm to get consensus and variant calling on the mapped reads.    
 
-    - First, align the raw PacBio reads (*.subreads.bam files) to the assembled genome sequence using pbalign with the following command:    
+    - First, align the raw PacBio reads (*.subreads.bam files) to the assembled genome sequence using pbalign with the following command:
+    ```
+    pbalign raw_PacBio.subreads.bam maize.contigs.fasta raw_PacBio.subreads_aligned.bam
+    ```
     
 ## Expected results
 
