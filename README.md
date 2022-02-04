@@ -137,7 +137,8 @@ canu -assemble \
 
     ```
 
-- 2. Use ntEdit to further polish the assembly
+2. Use ntEdit to further polish the assembly
+- It is highly recommended to use high-quality Illumina short-read data to further polish the assembled genome sequence. 
 	- First, run the tool ntHits to split the Illumina short reads into kmers. The kmers pass the coverage thresholds will be used to build a bloom filter (BF). 
 	```
 	nthits -c 2 --outbloom -p maize -b 36 -k 25 -t 8 \
