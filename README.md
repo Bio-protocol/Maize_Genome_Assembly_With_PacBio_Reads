@@ -97,7 +97,7 @@ canu -trim \
 
 ```
     
-#### Step 3: Assemble the corrected and trimmed reads into unitigs
+3. Assemble the corrected and trimmed reads into unitigs
 - The assembly phase will identify the consistent overlaps, order and orient reads into contigs and generate a consensus sequence for the unitig. The output of the trimming phase will be used for unitig construction. The users need to -pacbio-corrected option to provide corrected and trimmed PacBio reads as input data and use -assemble option to let Canu only assemble the corrected and trimmed reads. 
 - Canu will generate three assembled sequences including maize.contigs.fasta, maize.unitigs.fasta and maize.unassembled.fasta, where maize.contigs.fasta is the primary output.
 
@@ -109,6 +109,8 @@ canu -assemble \
 
 ```
 
+#### Step 3:   
+    
 ## Expected results
 
 ![](graphs/figure1.png)
