@@ -129,10 +129,10 @@ canu -assemble \
     
     ```
     variantCaller --algorithm=arrow raw_PacBio.subreads_aligned.bam \
-       	          --referenceFilename maize.contigs.fasta \
+                  --referenceFilename maize.contigs.fasta \
 	          -j 32 \
 	          -o Maize.contigs.polished.arrow.fastq \
-                  -o Maize.contigs.polished.arrow.fasta \
+	          -o Maize.contigs.polished.arrow.fasta \
 	          -o Maize.contigs.polished.arrow.gff
 
     ```
