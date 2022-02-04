@@ -125,15 +125,15 @@ canu -assemble \
     samtools faidx maize.contigs.fasta
     ```
     
-    - d.	Run variantCaller command line tool to call Arrow on the aligned bam files
+    - Run variantCaller command line tool to call Arrow on the aligned bam files
     
     ```
     variantCaller --algorithm=arrow raw_PacBio.subreads_aligned.bam \
        	          --referenceFilename maize.contigs.fasta \
-	              -j 32 \
-	              -o Maize.contigs.polished.arrow.fastq \
+	          -j 32 \
+	          -o Maize.contigs.polished.arrow.fastq \
                   -o Maize.contigs.polished.arrow.fasta \
-	              -o Maize.contigs.polished.arrow.gff
+	          -o Maize.contigs.polished.arrow.gff
 
     ```
     
