@@ -1,0 +1,126 @@
+<pbds:SubreadSet CreatedAt="2018-03-05T19:04:56.939Z" MetaType="PacBio.DataSet.SubreadSet" Name="NS872-la453-sh2-CTAB-perp1-M-32pM-002-030518-Cell1" Tags="subreadset" TimeStampedName="54115-SubreadSetCollection-2018-06-05T19:06:29.456Z" UniqueId="bb8f76e4-d9bb-4f45-af4a-6a56aada15f5" Version="4.0.1" xmlns="http://pacificbiosciences.com/PacBioDatasets.xsd" xmlns:pbbase="http://pacificbiosciences.com/PacBioBaseDataModel.xsd" xmlns:pbdm="http://pacificbiosciences.com/PacBioDataModel.xsd" xmlns:pbds="http://pacificbiosciences.com/PacBioDatasets.xsd" xmlns:pbmeta="http://pacificbiosciences.com/PacBioCollectionMetadata.xsd" xmlns:pbpn="http://pacificbiosciences.com/PacBioPartNumbers.xsd" xmlns:pbrk="http://pacificbiosciences.com/PacBioReagentKit.xsd" xmlns:pbsample="http://pacificbiosciences.com/PacBioSampleInfo.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pacificbiosciences.com/PacBioSecondaryDataModel.xsd">
+    <pbbase:ExternalResources>
+        <pbbase:ExternalResource Description="Points to the subreads bam file." MetaType="PacBio.SubreadFile.SubreadBamFile" Name="subreads bam" ResourceId="m54115_180305_191509.subreads.bam" TimeStampedName="pacbio_subreadfile_subreadbamfile-180306_081442259" UniqueId="e6c05a43-f70a-47b0-b251-6728ee8981b0" Version="4.0.1">
+            <pbbase:FileIndices>
+                <pbbase:FileIndex MetaType="PacBio.Index.PacBioIndex" ResourceId="m54115_180305_191509.subreads.bam.pbi" TimeStampedName="pacbio_index_pacbioindex-180306_081442259" UniqueId="87c63efc-c7aa-4ba3-97b1-0727431de4ab" Version="4.0.1" />
+            </pbbase:FileIndices>
+            <pbbase:ExternalResources>
+                <pbbase:ExternalResource Description="Points to the scraps bam file." MetaType="PacBio.SubreadFile.ScrapsBamFile" Name="scraps bam" ResourceId="m54115_180305_191509.scraps.bam" TimeStampedName="pacbio_subreadfile_scrapsbamfile-180306_081442264" UniqueId="38f9d060-8afa-4400-81fd-a55b6142fea6" Version="4.0.1">
+                    <pbbase:FileIndices>
+                        <pbbase:FileIndex MetaType="PacBio.Index.PacBioIndex" ResourceId="m54115_180305_191509.scraps.bam.pbi" TimeStampedName="pacbio_index_pacbioindex-180306_081442264" UniqueId="6fdd59f3-d829-4337-b912-479ffc3daecd" Version="4.0.1" />
+                    </pbbase:FileIndices>
+                </pbbase:ExternalResource>
+                <pbbase:ExternalResource Description="Points to the adapters.fasta file." MetaType="PacBio.SubreadFile.AdapterFastaFile" Name="Adapters FASTA" ResourceId="m54115_180305_191509.adapters.fasta" TimeStampedName="pacbio_subreadfile_adapterfastafile-180306_081442264" UniqueId="ca835d2d-bd36-4b81-afdf-e331d6be1a45" Version="4.0.1" />
+                <pbbase:ExternalResource Description="Points to the summary sts.xml file." MetaType="PacBio.SubreadFile.ChipStatsFile" Name="Chipstats XML" ResourceId="m54115_180305_191509.sts.xml" TimeStampedName="pacbio_subreadfile_chipstatsfile-180306_081442264" UniqueId="4408fe8b-fc24-48d8-81de-9ed5e1c06c10" Version="4.0.1" />
+            </pbbase:ExternalResources>
+        </pbbase:ExternalResource>
+    </pbbase:ExternalResources>
+    <pbds:DataSetMetadata>
+        <pbds:TotalLength>2590656760</pbds:TotalLength>
+        <pbds:NumRecords>435282</pbds:NumRecords>
+        <Collections xmlns="http://pacificbiosciences.com/PacBioCollectionMetadata.xsd">
+            <CollectionMetadata CreatedAt="2018-03-05T19:04:56.939Z" ModifiedAt="0001-01-01T00:00:00" UniqueId="bb8f76e4-d9bb-4f45-af4a-6a56aada15f5" MetaType="CollectionMetadata" TimeStampedName="54115-CollectionMetadata-2018-06-05T19:06:29.456Z" Status="Ready" InstrumentId="54115" InstrumentName="54115" Context="m54115_180305_191509">
+                <InstCtrlVer>5.0.0.12545</InstCtrlVer>
+                <SigProcVer>5.0.0.6236</SigProcVer>
+                <RunDetails>
+                    <TimeStampedName>r54115_20180305_190629</TimeStampedName>
+                    <Name>SQ54115-NS872-030518</Name>
+                    <CreatedBy>admin</CreatedBy>
+                    <WhenCreated>2018-03-05T19:04:56.939Z</WhenCreated>
+                    <StartedBy>unknown</StartedBy>
+                    <WhenStarted>0001-01-01T00:00:00</WhenStarted>
+                </RunDetails>
+                <WellSample Name="NS872-la453-sh2-CTAB-perp1-M-32pM-002-030518" Description="P1-without sheared,PBC-030218,MSCP-030218,Punperp-030218" CreatedAt="2018-03-05T19:04:56.939Z" ModifiedAt="0001-01-01T00:00:00">
+                    <WellName>A01</WellName>
+                    <Concentration>0</Concentration>
+                    <InsertSize>20000</InsertSize>
+                    <SampleReuseEnabled>false</SampleReuseEnabled>
+                    <StageHotstartEnabled>false</StageHotstartEnabled>
+                    <SizeSelectionEnabled>true</SizeSelectionEnabled>
+                    <UseCount>0</UseCount>
+                    <DNAControlComplex>Internal Control 2.0</DNAControlComplex>
+                </WellSample>
+                <Automation Name="Workflow_Magbead.py">
+                    <AutomationParameters xmlns="http://pacificbiosciences.com/PacBioBaseDataModel.xsd">
+                        <AutomationParameter Name="MovieLength" CreatedAt="2018-03-05T19:04:56.939Z" ModifiedAt="0001-01-01T00:00:00" ValueDataType="Double" SimpleValue="600" />
+                        <AutomationParameter Name="ExtensionTime" CreatedAt="2018-03-05T19:04:56.939Z" ModifiedAt="0001-01-01T00:00:00" ValueDataType="Double" SimpleValue="0" />
+                        <AutomationParameter Name="ExtendFirst" CreatedAt="2018-03-05T19:04:56.939Z" ModifiedAt="0001-01-01T00:00:00" ValueDataType="Boolean" SimpleValue="False" />
+                        <AutomationParameter Name="ImmobilizationTime" CreatedAt="2018-03-05T19:04:56.939Z" ModifiedAt="0001-01-01T00:00:00" ValueDataType="Double" SimpleValue="120" />
+                        <AutomationParameter Name="GentleWash" ValueDataType="Boolean" SimpleValue="True" />
+                        <AutomationParameter Name="CellNFCIndex" ValueDataType="Int32" SimpleValue="1" />
+                        <AutomationParameter Name="ExtraIMWashes" ValueDataType="Int32" SimpleValue="2" />
+                        <AutomationParameter Name="CollectionNumber" ValueDataType="Int32" SimpleValue="0" />
+                        <AutomationParameter Name="UseStageHotStart" ValueDataType="Boolean" SimpleValue="False" />
+                        <AutomationParameter Name="InsertSize" ValueDataType="Int32" SimpleValue="20000" />
+                        <AutomationParameter Name="HasN2Switch" ValueDataType="Boolean" SimpleValue="False" />
+                        <AutomationParameter Name="SNRCut" ValueDataType="Double" SimpleValue="3.75" />
+                    </AutomationParameters>
+                </Automation>
+                <CollectionNumber>0</CollectionNumber>
+                <CellIndex>0</CellIndex>
+                <CellPac Name="SMRT®Cell 1M (4/Pack)" Description="The Sequel SMRT Cell 1M (4/Pack) are nanofabricated consumables each patterned with 1,000,000 wells called zero-mode waveguides (ZMWs). They are packaged together in a streamlined 4 SMRT Cell format (4/tray). One SMRT Cell is utilized in each sequencing reaction, and experiments can be run in single or in batch mode, giving your projects a greater level of flexibility." Version="2.0" PartNumber="101-008-000" LotNumber="324023" Barcode="BA144898" ExpirationDate="2018-06-06" />
+                <ControlKit Name="Internal Control 2.0" Description="The Sequel DNA Internal Control 2.0 contains a fixed template of 2 kb length bound to Sequel Binding Kit 1.0 for use as an internal sequencing control. Reagent quantities provide spike-in controls for a minimum of 24 samples." Tags="Control Kit, CCK" Version="2.0" PartNumber="101-084-300" LotNumber="Lxxxxx" Barcode="Lxxxxx101084300123199" ExpirationDate="2099-12-31">
+                    <CustomSequence xmlns="http://pacificbiosciences.com/PacBioBaseDataModel.xsd">&gt;left_adapter\nTAGAGAGAGAAAAGGAGGAGGAGGCAACAACAACAACTCTCTCTA\n&gt;right_adapter\nTAGAGAGAGAAAAGGAGGAGGAGGCAACAACAACAACTCTCTCTA\n&gt;custom_sequence\nTGTCTAGGTCATCTCAACGTAGCTTTGACATATAACTTATCTAAAGTAATCCCTGCACACCTGTATGCATTATGCTTGCTATACACGCGGACACAGGCATATCATTTATTTTTTGCCATGTCCATTAATTGTTCAATAATTTTACTCACGGTATTTAATTTGATGTTGTGTTATATAGAATTGGAATTAAACTTATAAGGATGCTTAGACGTTGCATTATAAAAGTTTATGTACTAAGTATTTAAGACATTGGCATATGATTATAGCTTGACATTATTAAAAATTAATTAATTAAATCTCACACAATACTTATTCAAGACATTTTTACTAAGATAACCAAAGGAATGCGAACAAAATAATACTTAAAATATAAGACTTAGAAGTAATATGATCCAATAGTTACATATAGTACACTAAGTTCCTAAATTATATAACTTTAAAACAAAGTTACGAAATTTGGAAATAATTTTATTTAATCATATTTTCATAATAATGAAATACTGTTTATTTCAGTGGCGAAAAGAGATAATACGATTTTATAGTGATAGAATATCCTTGAAATATCTAAAGATAAAATTAGAAACTTTCTCTTTTCGCTGTAAAGCTATATGACTTAAAAATAACTTATACGCAAAGTATATTGCAGTGGAAACCCAAGAGTATAGTAGCCATGTAATCTCGGGTTCGAAACTACACGCCGCGCACGTAGTCAGATGGTCTGAAACTTGTCTGGGGCTGTTTGTTGACGGATGGAGACTTCACTAAGTGGCGTCAGGCGATGCGCACACACGGGACTCAATCCCGTAGCATGTTATGTGTCGTTCGAAACTCGTGCGTTCGAGATTTACGCCACATTGCCGGCTGGTCCAAGGACGTTATCTACCAGATGATACGGTCCAATTCGTAAGTTTGACTCACATAGTCGCGAACCGCGGAGCTGGAGAACAATAATTACCGGATGATTAGTTGACCATACGCACTATCATGCTCCGTGACTCAGTTTCCGCCATGGAGTTCTCACAGCCCCGTGTGTACCATAACTGCAGTAAGTAAGGACCTTGTTCGGAGGCCGACTCGTATTTCATATGATCTTAGTCTCGCCACCTTATCGCACGAATTGGGGGTGTCTTTTAGCCGACTCCGGCACGATCCGCCGGGAAGTTACTCGACCAGTTGCGGGACGCCCTAGTATGTTCGTATTACGTTCGATGCGTAAGCACCCCAGAGATTTTTGGCGGACGTTTCGGTAAATCATAGTAGAACCGGAGCGGTAAAGCTATTGATAACACGCAGGGACGAGCCAGTCGTCTAAGCTCCTCAGGGGTACCGTTCGCCGGACTACAGCCTGTCCCCGGCGGCCGCAACTGGGCTGCGATCCAGCCCCCGCTCCAAAAGGATGACTCGACCTTGCGCCTCGCGTACTCTGCTCTCGAGCTGTCTCCGTGGGCAATGCCGGCTCACGCTGTGGGGAACCCTGGACGCCCGGGCCGAGCCGACGTGGCCCCGCCCAGGCCTTTTCGTCGATCGCAGCTATGTACCCTGTGCTGGCCAGCGCTACTGCGCCGGCCATTAGCGGTGCGCTCTCGACTCGGCCCCAACGTAGACGGCGTCGCTGGCCGGATTCAAAGAAGTGAGCTACTACCATCGCGTGACGCCCTGCGGGCCTGAGTAACCGTGCACGAAGGACACCCCGTTCGTGGCGGGGGTTGCCTCCGCGACGGTCGCCAACGTTGGGGGTCGGTGCATTCAGGCGACGAGGGACCGCTGGTTTCCGGAGAGCGGCCTGTGCTCACACAGGTGCGGTCCATGGGGCCTGTGGATCCGGTTCTCCCACGCGTAGCGCCGGCGTTAGCATGGACGCTAAATAAGTATACGCCGGCAAAGGGAGTGTAGGCCGGCCCGAGGGCAATCGCGGTTACCGGGGTGGGGGAGCTCCCCGCACCAGCCTTGATGTGGTGTGCGAGCG</CustomSequence>
+                </ControlKit>
+                <TemplatePrepKit Name="SMRTbell™ Template Prep Kit" Description="The SMRTbell™ Template Prep Kit contains reagent supplies to perform SMRTbell library preparations of primer-annealed SMRTbell libraries for insert sizes ranging from 500 bp to over 20 kb." Tags="Template Prep Kit, TPK" Version="1.0" PartNumber="100-259-100" LotNumber="010420" Barcode="010420100259100040618" ExpirationDate="2018-04-06" MinInsertSize="500" MaxInsertSize="20000">
+                    <LeftAdaptorSequence xmlns="http://pacificbiosciences.com/PacBioBaseDataModel.xsd">ATCTCTCTCAACAACAACAACGGAGGAGGAGGAAAAGAGAGAGAT</LeftAdaptorSequence>
+                    <LeftPrimerSequence xmlns="http://pacificbiosciences.com/PacBioBaseDataModel.xsd">aacggaggaggagga</LeftPrimerSequence>
+                    <RightAdaptorSequence xmlns="http://pacificbiosciences.com/PacBioBaseDataModel.xsd">ATCTCTCTCAACAACAACAACGGAGGAGGAGGAAAAGAGAGAGAT</RightAdaptorSequence>
+                    <RightPrimerSequence xmlns="http://pacificbiosciences.com/PacBioBaseDataModel.xsd">aacggaggaggagga</RightPrimerSequence>
+                </TemplatePrepKit>
+                <BindingKit Name="Sequel™ Binding Kit 2.0" Description="The Sequel Binding Kit 2.0 contains reagent supplies to bind prepared DNA template libraries to the Sequel Polymerase 1.0 in preparation for sequencing on the Sequel System. The result is a DNA polymerase/template complex. Sequel Binding Kit 1.0 should be used only with Sequel Sequencing Kit 1.0. Reagent quantities support 24 binding reactions." Tags="Binding Kit, BDK" Version="1.0" PartNumber="100-862-200" LotNumber="010438" Barcode="010438100862200050618" ExpirationDate="2018-05-06" />
+                <SequencingKitPlate Name="Sequel™ Sequencing Plate 2.1, (4Rxn)" Description="The DNA Sequencing Kit contains a sequencing reagent plate with chemistry for single molecule real-time sequencing on the PacBio RS. Reagent quantities support 4 sequencing reactions to be used in conjunction with SMRT® Cell 4Pac(s).  (4 Cells max/Each Row supplies reagents for 1 Sequel SMRT Cell)" Tags="Sequencing Kit, SQK" Version="2.1" PartNumber="101-309-400" LotNumber="011271" Barcode="011271101309400070918" ExpirationDate="2018-07-09" MaxCollections="4" ActiveHours="0">
+                    <ReagentTubes Name="Sequel™ OS Enzyme" PartNumber="100-619-700" LotNumber="110482" Barcode="110482100619700121219" ExpirationDate="2019-12-12" ActiveHours="0" xmlns="http://pacificbiosciences.com/PacBioReagentKit.xsd" />
+                    <ReagentTubes Name="Sequel™ SMRT®Cell Oil" PartNumber="100-619-600" LotNumber="011386" Barcode="011386100619600033122" ExpirationDate="2022-03-31" ActiveHours="0" xmlns="http://pacificbiosciences.com/PacBioReagentKit.xsd" />
+                </SequencingKitPlate>
+                <Primary>
+                    <AutomationName>SequelAlpha</AutomationName>
+                    <ConfigFileName>SqlPoC_SubCrf_2C2A-t2.xml</ConfigFileName>
+                    <SequencingCondition>DefaultPrimarySequencingCondition</SequencingCondition>
+                    <OutputOptions>
+                        <ResultsFolder>r54115_20180305_190629/1_A01/</ResultsFolder>
+                        <CollectionPathUri>/mnt/DDN/r54115_20180305_190629/1_A01/</CollectionPathUri>
+                        <CopyFiles>
+                            <CollectionFileCopy>Fasta</CollectionFileCopy>
+                            <CollectionFileCopy>Bam</CollectionFileCopy>
+                        </CopyFiles>
+                        <Readout>Bases_Without_QVs</Readout>
+                        <MetricsVerbosity>Minimal</MetricsVerbosity>
+                        <TransferResource>
+                            <Id>rsync-pbi-collections</Id>
+                            <TransferScheme>RSYNC</TransferScheme>
+                            <Name>PBI Collections Transfer test using Rsync Server</Name>
+                            <Description>something</Description>
+                            <DestPath>/mnt/DDN</DestPath>
+                        </TransferResource>
+                    </OutputOptions>
+                </Primary>
+                <Secondary>
+                    <AutomationName>DefaultSecondaryAutomationName</AutomationName>
+                    <AutomationParameters>
+                        <AutomationParameter Name="Reference" CreatedAt="0001-01-01T00:00:00" ModifiedAt="0001-01-01T00:00:00" ValueDataType="String" SimpleValue="DefaultSecondaryAnalysisReferenceName" />
+                    </AutomationParameters>
+                    <CellCountInJob>0</CellCountInJob>
+                </Secondary>
+                <UserDefinedFields>
+                    <DataEntities Name=" LIMS_IMPORT " ValueDataType="String" SimpleValue="DefaultUserDefinedFieldLIMS" xmlns="http://pacificbiosciences.com/PacBioBaseDataModel.xsd" />
+                </UserDefinedFields>
+                <ComponentVersions>
+                    <VersionInfo Name="ics" Version="5.0.0.12545" />
+                    <VersionInfo Name="iui" Version="5.0.0.6235" />
+                    <VersionInfo Name="pa" Version="5.0.0.6236" />
+                    <VersionInfo Name="paws" Version="5.0.0.6236" />
+                    <VersionInfo Name="ppa" Version="5.0.0.6236" />
+                    <VersionInfo Name="realtime" Version="5.0.0.6236" />
+                    <VersionInfo Name="transfer" Version="5.0.0.6236" />
+                    <VersionInfo Name="smrtview" Version="5.0.1.9578" />
+                    <VersionInfo Name="smrtlink" Version="5.0.1.9585" />
+                    <VersionInfo Name="smrtimisc" Version="5.0.1.9585" />
+                    <VersionInfo Name="smrttools" Version="5.0.1.9578" />
+                    <VersionInfo Name="smrtlink-analysisservices-gui" Version="5.0.1.9579" />
+                    <VersionInfo Name="smrtinub" Version="5.0.1.9578" />
+                </ComponentVersions>
+            </CollectionMetadata>
+        </Collections>
+    </pbds:DataSetMetadata>
+</pbds:SubreadSet>
