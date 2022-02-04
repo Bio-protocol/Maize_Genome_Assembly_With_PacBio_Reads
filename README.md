@@ -125,7 +125,7 @@ canu -assemble \
     samtools faidx maize.contigs.fasta
     ```
     
-    - Run variantCaller command line tool to call Arrow on the aligned bam files
+    - Run variantCaller command line tool to call Arrow on the aligned bam files.
     
     ```
     variantCaller --algorithm=arrow raw_PacBio.subreads_aligned.bam \
@@ -136,7 +136,16 @@ canu -assemble \
 	              -o Maize.contigs.polished.arrow.gff
 
     ```
-    
+
+- 2. Use ntEdit to further polish the assembly
+	- First, run the tool ntHits to split the Illumina short reads into kmers. The kmers pass the coverage thresholds will be used to build a bloom filter (BF). 
+	```
+	nthits -c 2 --outbloom -p maize -b 36 -k 25 -t 8 \
+               maize.R1.pair.fq maize.R2.pair.fq
+
+	```
+	
+	
 ## Expected results
 
 ![](graphs/figure1.png)
