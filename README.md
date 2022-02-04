@@ -156,9 +156,12 @@ canu -assemble \
 
 	```
 	
-## Expected results
-
-![](graphs/figure1.png)
+3. Quality assessment
+- After genome assembly and genome polishing, it is necessary to check the completeness and duplication of the assembly. BUSCO is a commonly used tool to assess the completeness of the genome assembly. Check the newest version at https://busco.ezlab.org/. The users can run BUSCO by using the following command line:
+	
+```
+run_BUSCO.py -i Maize.contigs.polished.arrow.ntedit_edited.fa -o PacBio_assembly.BUSCO -m geno -sp maize -l embryophyta_odb9 	
+```
 
 ## License
 It is a free and open source software, licensed under []() (choose a license from the suggested list:  [GPLv3](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/gpl-3.0.txt), [MIT](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md), or [CC BY 4.0](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/cc-by-4.0.txt)).
