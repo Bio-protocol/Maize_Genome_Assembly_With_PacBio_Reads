@@ -147,6 +147,7 @@ canu -assemble \
 	```
 	
 	- Then, ntEdit will polish the Arrow-polished contigs from the assembled genome sequence based on BF data.
+	- The -f option is the users’ assembled genome input, -r sets the bloom filter file generated from ntHits, -k sets the length of the kmer, and -b sets the output file prefix (The name of output of ntHits is Maize.contigs.polished.arrow.ntedit_edited.fa based on the above settings). Optionally, the number of CPUs can be set (-t <int>).
 	
 	```
 	ntedit -f Maize.contigs.polished.arrow.fasta \
