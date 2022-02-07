@@ -9,7 +9,7 @@ To guide eBook authors having a better sense of the workflow layout, here we bri
 
 1. __cache__: Here, it stores intermediate datasets or results that are generated during the preprocessing steps.
 2. __graphs__: The graphs/figures produced during the analysis.
-3. __input__: Here, we store the raw input data. 
+3. __input__: Here, we store a subset of the raw input data. 
 4. __lib__: The source code, functions, or algorithms used within the workflow.
 5. __output__: The final output results of the workflow.
 6. __workflow__: Step by step pipeline. 
