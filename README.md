@@ -83,7 +83,7 @@ canu -correct \
 ```
 
 2. Trim the corrected reads
-- The trim phase will decide the high-quality regions using overlapping reads and remove the remaining SMRTbell adapter sequences. The input data should be the output of the correction phase. The users need to use -pacbio-corrected option to provide corrected PacBio reads as input data and use -trim option to let Canu only trim the corrected reads. 
+- The trim phase will decide the high-quality regions using overlapping reads and remove the remaining SMRTbell adapter sequences. The input data should be the output of the correction phase. The users need to use -pacbio-corrected option to provide corrected PacBio reads as input data and use -trim option to let Canu only trim the corrected reads. The output of the trimming phase will be one compressed fasta file with all corrected and trimmed reads (maize.trimmedReads.fasta.gz in our example).
 
 ```
 canu -trim \
@@ -122,6 +122,7 @@ canu -assemble \
     ```
     
     - Run variantCaller command line tool to call Arrow on the aligned bam files.
+    - The --algorithm option sets the algorithm as Arrow, --referenceFilename provides the file name of the assembled genome FASTA file, -j is optional to set the number of threads and -o sets the output files. The users can generate multiple outputs with different formats, including FASTA, FASTQ, GFF and VCF.
     
     ```
     variantCaller --algorithm=arrow raw_PacBio.subreads_aligned.bam \
