@@ -141,21 +141,21 @@ canu -assemble \
 	- The -c option sets the maximum coverage threshold for reporting kmer. We recommend setting -c as 1 for low coverage Illumina short-read data (<20x), 2 for coverage (20-30x) or running with the --solid with high coverage data (>30x) to report non-error kmers. The option --outbloom will output the coverage-thresholded kmers in a Bloom filter and option -p will set the prefix for the output file name (The name of output of ntHits is maize_k25.bf based on the above settings). The bloom filter bit size is defined by the option -b (-b 36: keep the Bloom filter false positive rate low (~0.0005)) and the kmer size can be adjusted using the option -k. Optionally, the number of CPUs can be set (-t <int>). The input file can be two pair-end fastq files or a file listing the path to all pair-end fastq files.
 	
 	
-```
-nthits -c 2 --outbloom -p maize -b 36 -k 25 -t 8 \
-       maize.R1.pair.fq maize.R2.pair.fq
+	```
+	nthits -c 2 --outbloom -p maize -b 36 -k 25 -t 8 \
+       	       maize.R1.pair.fq maize.R2.pair.fq
 
-```
+	```
 	
 	- Then, ntEdit will polish the Arrow-polished contigs from the assembled genome sequence based on BF data.
 	- The -f option is the users’ assembled genome input, -r sets the bloom filter file generated from ntHits, -k sets the length of the kmer, and -b sets the output file prefix (The name of output of ntHits is Maize.contigs.polished.arrow.ntedit_edited.fa based on the above settings). Optionally, the number of CPUs can be set (-t <int>).
 	
 
-```
-ntedit -f Maize.contigs.polished.arrow.fasta \
-       -r maize_k25.bf -k 25 -b Maize.contigs.polished.arrow.ntedit -t 24
+	```
+	ntedit -f Maize.contigs.polished.arrow.fasta \
+               -r maize_k25.bf -k 25 -b Maize.contigs.polished.arrow.ntedit -t 24
 
-```
+	```
 	
 3. Quality assessment
 - After genome assembly and genome polishing, it is necessary to check the completeness and duplication of the assembly. BUSCO is a commonly used tool to assess the completeness of the genome assembly. Check the newest version at https://busco.ezlab.org/. The users can run BUSCO by using the following command line:
