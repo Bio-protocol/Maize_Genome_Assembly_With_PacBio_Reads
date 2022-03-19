@@ -162,7 +162,7 @@ canu -assemble \
 - The -i option is the assembled fasta sequence, -o is the output file name, -m sets the mode for BUSCO (geno or genome for genome assemblies, tran or transcriptome for transcriptome assemblies or prot or proteins, for annotated gene sets) and -l is the dataset used as reference for comparison (The lineage data (embryophyta_odb9) is related to maize). The lineage data can be downloaded from BUSCO website.	
 	
 ```
-run_BUSCO.py -i Maize.contigs.polished.arrow.ntedit_edited.fa -o PacBio_assembly.BUSCO -m geno -sp maize -l embryophyta_odb9 	
+run_BUSCO.py -i Maize.contigs.polished.arrow.ntedit.fa -o PacBio_assembly.BUSCO -m geno -sp maize -l embryophyta_odb9 	
 ```
 
 ## License
