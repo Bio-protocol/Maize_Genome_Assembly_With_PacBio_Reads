@@ -131,7 +131,6 @@ canu -assemble \
 	              -o Maize.contigs.polished.arrow.fastq \
 	              -o Maize.contigs.polished.arrow.fasta \
 	              -o Maize.contigs.polished.arrow.gff
-
     ```
 
 2. Use ntEdit to further polish the assembly
@@ -144,7 +143,6 @@ canu -assemble \
 	```
 	nthits -c 2 --outbloom -p maize -b 36 -k 25 -t 8 \
        	       maize.R1.pair.fq maize.R2.pair.fq
-
 	```
 	
 	- Then, ntEdit will polish the Arrow-polished contigs from the assembled genome sequence based on BF data.
