@@ -1,0 +1,15 @@
+# BUSCO version is: 3.0.2 
+# The lineage dataset is: embryophyta_odb9 (Creation date: 2016-02-13, number of species: 30, number of BUSCOs: 1440)
+# To reproduce this run: python /apps/gcc/5.2.0/python/apps/2.7.10/busco/3.02/bin/run_BUSCO.py -i Maize.contigs.polished.arrow.ntedit.fa -o PacBio_assembly.BUSCO -m geno -sp maize -l embryophyta_odb9
+#
+# Summarized benchmarking in BUSCO notation for file Maize.contigs.polished.arrow.ntedit.fa
+# BUSCO was run in mode: genome
+
+        C:94.7%[S:88.1%,D:6.6%],F:1.3%,M:4.0%,n:1440
+
+        1363    Complete BUSCOs (C)
+        1268    Complete and single-copy BUSCOs (S)
+        95      Complete and duplicated BUSCOs (D)
+        18      Fragmented BUSCOs (F)
+        59      Missing BUSCOs (M)
+        1440    Total BUSCO groups searched
