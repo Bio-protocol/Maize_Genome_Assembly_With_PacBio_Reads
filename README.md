@@ -154,7 +154,6 @@ canu -assemble \
 	```
 	ntedit -f Maize.contigs.polished.arrow.fasta \
                -r maize_k25.bf -k 25 -b Maize.contigs.polished.arrow.ntedit -t 24
-
 	```
 	
 3. Quality assessment
