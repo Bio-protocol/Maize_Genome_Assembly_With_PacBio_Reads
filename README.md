@@ -8,8 +8,9 @@ Here we briefly introduce the specific purposes of the dir system.
 
  
 1. __graphs__: The graphs/figures produced during the analysis.
-2. __input__: Here, we store a subset of the raw input data. 
-3. __README__: This document.
+2. __input__: Here, we provide a download link of the raw PacBio data. 
+3. __output__: The final output results of the workflow.
+4. __README__: This document.
 
 ## Overview of the workflow: Pre-processing of the PacBio raw reads, genome assembly and polishing
 
@@ -22,18 +23,88 @@ This is the workflow to show a step-by-step pipeline to assemble a maize genome 
 - __Running environment__: 
     - The workflow was constructed based on the __Red Hat Enterprise Linux Server release 7.7 (Maipo)__.
 
-- __Required software and versions__: 
+- __Required software and installation__: 
     - [SMRT Tools v10.1.0](https://www.pacb.com/support/software-downloads/)
+    	- [This document](https://www.pacb.com/wp-content/uploads/SMRT_Link_Installation_v10.1.pdf) describes the procedure for installing SMRT Link v10.1. 
+    	
     - [SequelTools v1.1.0](https://github.com/ISUgenomics/SequelTools)
+    
+    
+    ```
+    git clone https://github.com/ISUgenomics/SequelTools.git
+    cd SequelTools/Scripts
+    chmod +x *.sh *.py *.R
+    export PATH=$PATH:"$(pwd)"
+    echo 'export PATH=$PATH:/path/to/SequelTools' >> ~/.bashrc
+    source ~/.bashrc
+    ```
+    
     - [Canu v1.8](https://canu.readthedocs.io/en/latest/)
+
+
+    ```
+    git clone https://github.com/marbl/canu.git
+    cd canu/src
+    make -j <number of threads>
+    ```
+    
     - [BUSCO v3.0.2](https://busco.ezlab.org/)
+
+
+    ```
+    conda install -c conda-forge -c bioconda busco=3.0.2
+    ```
+    
     - [Pbalign v0.3.2](https://github.com/PacificBiosciences/pbalign)
+
+
+     ```
+     conda install -c bioconda pbalign
+     ```
+     
     - [Sambamba v0.6.9](https://github.com/biod/sambamba)
+    
+    
+    ```
+    conda install -c bioconda Sambamba
+    ```
+    
     - [Samtools v1.12](https://github.com/samtools/samtools)
+
+
+    ```
+    conda install -c bioconda samtools
+    ```
+    
     - [Arrow v2.3.3](https://github.com/PacificBiosciences/GenomicConsensus/)
+
+
+    ```
+    git clone https://github.com/PacificBiosciences/GenomicConsensus.git
+    make
+    ```
+    
     - [ntHits v1.2.1](https://github.com/bcgsc/ntHits)
+
+
+    ```
+    git clone https://github.com/bcgsc/ntHits.git
+    cd ntHits
+    ./autogen.sh
+    ./configure
+    make 
+    sudo make install 
+    ```
+    
     - [ntEdit v1.2.1](https://github.com/bcgsc/ntEdit)
 
+
+    ```
+    git clone https://github.com/bcgsc/ntEdit.git
+    cd ntEdit
+    make ntedit
+    ```
+    
 ## Input Data
 
 The raw data of each SMRT-cell include files named *.subreads.bam, *.subreads.pbi and *.subreadset.xml. One subreads.bam file contains multiple copies of subreads generated from the single SMRTBell from high-quality regions. It is analysis-ready and will be used directly for the following analysis. Subreads containing unaligned base calls outside of high-quality regions or excised adapter and barcode sequences are retained in a scraps.bam file. 
