@@ -1,3 +1,0 @@
-The PacBio raw data are stored at Cyverse. The files up to 2 GB are web-based accessed that downloaded directly from Data commons repositories without a CyVerse user account, while files larger than 2 GB must be downloaded using another mode. Here is the instruction to download the raw PacBio data.
-
-1. Click [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/raw_Pacbio) to download the data.
