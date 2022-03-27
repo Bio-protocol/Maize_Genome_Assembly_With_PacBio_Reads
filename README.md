@@ -116,10 +116,10 @@ The download instruction can be found in the input folder.
 
 #### Step 1: A.	Pre-processing of the PacBio raw reads
 - Covert the *.subreads.bam files to fastq files with the PacBio tool bam2fastq which is part of the free SMRT Tools. Note: The common 'bam2fastq' comes from SAMtools and doesn't have -c parameter.
-- Use -c 9 to get all the subreads and then let the assembler decide which reads are good for genome assembly. The command bam2fastq will generate a fastq file (raw_PacBio.fastq) 
+- Use -c 9 to get all the subreads and then let the assembler decide which reads are good for genome assembly. The command bam2fastq will generate fastq files.
 
 ```
-bam2fastq -c 9 raw_PacBio.subreads.bam
+bam2fastq -c 9 *.subreads.bam
 ```
 
 - Use SequelTools to perform quality control of PacBio Sequel raw sequencing data from multiple SMRTcells. SequelTools requires Samtools, R and Python (version 2 or 3) pre-installed in the path.
@@ -136,6 +136,7 @@ bam2fastq -c 9 raw_PacBio.subreads.bam
 ```
   ./SequelTools.sh -t Q -u subFiles.txt -c scrFiles.txt
 ```
+- Check the results of SequelTools analysis in the folder: output/
 
 #### Step 2: Genome assembly using Canu
 
