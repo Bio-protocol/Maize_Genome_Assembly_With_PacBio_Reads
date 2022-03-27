@@ -136,7 +136,7 @@ bam2fastq -c 9 *.subreads.bam
 ```
   ./SequelTools.sh -t Q -u subFiles.txt -c scrFiles.txt
 ```
-- Check the results of SequelTools analysis in the folder: output/
+- Check the results of SequelTools analysis in the folder: output/SequelToolsResults.
 
 #### Step 2: Genome assembly using Canu
 
@@ -152,6 +152,8 @@ canu -correct \
      genomeSize=2.3g \
      -pacbio-raw raw_PacBio.fastq
 ```
+	
+The output file of Canu correction phase can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Canu). The instruction can be found in the input folder. 
 
 2. Trim the corrected reads
 - The trim phase will decide the high-quality regions using overlapping reads and remove the remaining SMRTbell adapter sequences. The input data should be the output of the correction phase. The users need to use -pacbio-corrected option to provide corrected PacBio reads as input data and use -trim option to let Canu only trim the corrected reads. The output of the trimming phase will be one compressed fasta file with all corrected and trimmed reads (maize.trimmedReads.fasta.gz in our example).
@@ -163,6 +165,8 @@ canu -trim \
      -pacbio-corrected maize/maize.correctedReads.fasta.gz
 
 ```
+	
+The output file of Canu trim phase can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Canu). The instruction can be found in the input folder. 	
     
 3. Assemble the corrected and trimmed reads into unitigs
 - The assembly phase will identify the consistent overlaps, order and orient reads into contigs and generate a consensus sequence for the unitig. The output of the trimming phase will be used for unitig construction. The users need to -pacbio-corrected option to provide corrected and trimmed PacBio reads as input data and use -assemble option to let Canu only assemble the corrected and trimmed reads. 
@@ -176,6 +180,8 @@ canu -assemble \
 
 ```
 
+The output file of Canu assembly phase can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Canu). The instruction can be found in the input folder. 	
+	
 #### Step 3: Assembly polishing
 1. Use Arrow to pollish the assembly
 - To improve the accuracy of the genome assembly, Arrow will be used to polish the contigs assembled from the Sequel System data by mapping a set of raw PacBio raw reads to the contigs and building a consensus of this read mapping. The variantCaller provided by GenomicConsensus package is the command line tool to call Arrow algorithm to get consensus and variant calling on the mapped reads.    
@@ -203,9 +209,11 @@ canu -assemble \
 	              -o Maize.contigs.polished.arrow.fasta \
 	              -o Maize.contigs.polished.arrow.gff
     ```
+	
+The output file of Arrow polishing can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Arrow). The instruction can be found in the input folder. 
 
 2. Use ntEdit to further polish the assembly
-- It is highly recommended to use high-quality Illumina short-read data to further polish the assembled genome sequence. Here, we use the pipeline called ntEdit to polish the assembled genome sequence. It is a bloom filter k-mer based approach that significantly reduces the running time.
+- It is highly recommended to use high-quality Illumina short-read data to further polish the assembled genome sequence. Here, we use the pipeline called ntEdit to polish the assembled genome sequence. It is a bloom filter k-mer based approach that significantly reduces the running time. The raw Illumina data used for ntEdit can be downloaded [HERE].(https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/WGS)
 	
 	- First, run the tool ntHits to split the Illumina short reads into kmers. The kmers pass the coverage thresholds will be used to build a bloom filter (BF). 
 	- The -c option sets the maximum coverage threshold for reporting kmer. We recommend setting -c as 1 for low coverage Illumina short-read data (<20x), 2 for coverage (20-30x) or running with the --solid with high coverage data (>30x) to report non-error kmers. The option --outbloom will output the coverage-thresholded kmers in a Bloom filter and option -p will set the prefix for the output file name (The name of output of ntHits is maize_k25.bf based on the above settings). The bloom filter bit size is defined by the option -b (-b 36: keep the Bloom filter false positive rate low (~0.0005)) and the kmer size can be adjusted using the option -k. Optionally, the number of CPUs can be set (-t <int>). The input file can be two pair-end fastq files or a file listing the path to all pair-end fastq files.
@@ -224,6 +232,8 @@ canu -assemble \
 	ntedit -f Maize.contigs.polished.arrow.fasta \
                -r maize_k25.bf -k 25 -b Maize.contigs.polished.arrow.ntedit -t 24
 	```
+
+The output file of ntEdit polishing can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/ntEdit). The instruction can be found in the input folder. 	
 	
 3. Quality assessment
 - After genome assembly and genome polishing, it is necessary to check the completeness and duplication of the assembly. BUSCO is a commonly used tool to assess the completeness of the genome assembly. Check the newest version at https://busco.ezlab.org/. The users can run BUSCO by using the following command line:
