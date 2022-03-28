@@ -161,7 +161,7 @@ canu -correct \
 	         raw_PacBio_9.fastq
 ```
 	
-The output file of Canu correction phase can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Canu). The instruction can be found in the input folder. 
+The output file of Canu correction phase can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Canu). The download instruction can be found in the input folder. 
 
 2. Trim the corrected reads
 - The trim phase will decide the high-quality regions using overlapping reads and remove the remaining SMRTbell adapter sequences. The input data should be the output of the correction phase. The users need to use -pacbio-corrected option to provide corrected PacBio reads as input data and use -trim option to let Canu only trim the corrected reads. The output of the trimming phase will be one compressed fasta file with all corrected and trimmed reads (maize.trimmedReads.fasta.gz in our example).
@@ -174,7 +174,7 @@ canu -trim \
 
 ```
 	
-The output file of Canu trim phase can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Canu). The instruction can be found in the input folder. 	
+The output file of Canu trim phase can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Canu). The download instruction can be found in the input folder. 	
     
 3. Assemble the corrected and trimmed reads into unitigs
 - The assembly phase will identify the consistent overlaps, order and orient reads into contigs and generate a consensus sequence for the unitig. The output of the trimming phase will be used for unitig construction. The users need to -pacbio-corrected option to provide corrected and trimmed PacBio reads as input data and use -assemble option to let Canu only assemble the corrected and trimmed reads. 
@@ -188,7 +188,7 @@ canu -assemble \
 
 ```
 
-The output file of Canu assembly phase can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Canu). The instruction can be found in the input folder. 	
+The output file of Canu assembly phase can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Canu). The download instruction can be found in the input folder. 	
 	
 #### Step 3: Assembly polishing
 1. Use Arrow to pollish the assembly
@@ -232,7 +232,7 @@ The output file of Canu assembly phase can be found [HERE](https://datacommons.c
 	              -o Maize.contigs.polished.arrow.gff
     ```
 	
-The output file of Arrow polishing can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Arrow). The instruction can be found in the input folder. 
+The output file of Arrow polishing can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Arrow). The download instruction can be found in the input folder. 
 
 2. Use ntEdit to further polish the assembly
 - It is highly recommended to use high-quality Illumina short-read data to further polish the assembled genome sequence. Here, we use the pipeline called ntEdit to polish the assembled genome sequence. It is a bloom filter k-mer based approach that significantly reduces the running time. The raw Illumina data used for ntEdit can be downloaded [HERE].(https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/WGS)
@@ -255,7 +255,7 @@ The output file of Arrow polishing can be found [HERE](https://datacommons.cyver
                -r maize_k25.bf -k 25 -b Maize.contigs.polished.arrow.ntedit -t 24
 	```
 
-The output file of ntEdit polishing can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/ntEdit). The instruction can be found in the input folder. 	
+The output file of ntEdit polishing can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/ntEdit). The download instruction can be found in the input folder. 	
 	
 3. Quality assessment
 - After genome assembly and genome polishing, it is necessary to check the completeness and duplication of the assembly. BUSCO is a commonly used tool to assess the completeness of the genome assembly. Check the newest version at https://busco.ezlab.org/. The users can run BUSCO by using the following command line:
