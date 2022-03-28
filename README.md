@@ -119,7 +119,7 @@ The download instruction can be found in the input folder.
 - Use -c 9 to get all the subreads and then let the assembler decide which reads are good for genome assembly. The command bam2fastq will generate fastq files.
 
 ```
-bam2fastq -c 9 *.subreads.bam
+bam2fastq -c 9 -o raw_PacBio_1 raw_PacBio_1.subreads.bam
 ```
 
 - Use SequelTools to perform quality control of PacBio Sequel raw sequencing data from multiple SMRTcells. SequelTools requires Samtools, R and Python (version 2 or 3) pre-installed in the path.
@@ -150,7 +150,9 @@ Here, we provide instructions for Canu version 1.8 to perform the maize genome a
 canu -correct \
      -p maize -d maize \
      genomeSize=2.3g \
-     -pacbio-raw raw_PacBio.fastq
+     -pacbio-raw raw_PacBio_1.fastq raw_PacBio_2.fastq raw_PacBio_3.fastq \
+                 raw_PacBio_4.fastq raw_PacBio_5.fastq raw_PacBio_6.fastq \
+                 raw_PacBio_7.fastq raw_PacBio_8.fastq raw_PacBio_9.fastq
 ```
 	
 The output file of Canu correction phase can be found [HERE](https://datacommons.cyverse.org/browse/iplant/home/moontree1985/analyses/bioprotocol/Canu). The instruction can be found in the input folder. 
@@ -189,9 +191,16 @@ The output file of Canu assembly phase can be found [HERE](https://datacommons.c
     - First, align the raw PacBio reads (*.subreads.bam files) to the assembled genome sequence using pbalign with the following command:
     
     ```
-    pbalign raw_PacBio.subreads.bam maize.contigs.fasta raw_PacBio.subreads_aligned.bam
+    pbalign raw_PacBio_1.subreads.bam maize.contigs.fasta raw_PacBio_1.subreads_aligned.bam
     ```
-    
+    - If the users have multiple bam files, they can use sambamba to merge those aligned bam files into one. For instance, merge nine aligned bam files into one as follows:
+	
+    ```
+    sambamba merge raw_PacBio.subreads_aligned_merged.bam raw_PacBio.subreads_aligned_1.bam raw_PacBio.subreads_aligned_2.bam \
+    raw_PacBio.subreads_aligned_3.bam raw_PacBio.subreads_aligned_4.bam raw_PacBio.subreads_aligned_5.bam raw_PacBio.subreads_aligned_6.bam \
+    raw_PacBio.subreads_aligned_7.bam raw_PacBio.subreads_aligned_8.bam raw_PacBio.subreads_aligned_9.bam
+    ```
+
     - Before polishing the assembled genome sequence, the reference genome should be indexed with samtools faidx.
     
     ```
