@@ -25,7 +25,7 @@ This is the workflow to show a step-by-step pipeline to assemble a maize genome 
 
 - __Required software and installation__: 
     - [SMRT Tools v10.1.0](https://www.pacb.com/support/software-downloads/)
-    	- [This document](https://www.pacb.com/wp-content/uploads/SMRT_Link_Installation_v10.1.pdf) describes the procedure for installing SMRT Link v10.1. 
+    	- [This document](https://www.pacb.com/wp-content/uploads/SMRT_Link_Installation_v10.1.pdf) describes the procedure of installing SMRT Link v10.1. 
     	
     - [SequelTools v1.1.0](https://github.com/ISUgenomics/SequelTools)
     
